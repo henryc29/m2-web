@@ -9,6 +9,7 @@ mattermost-webapp.iml
 .vscode/
 junit.xml
 coverage
+dist/
 
 # Environment variables
 .env*
