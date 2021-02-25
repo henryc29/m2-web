@@ -246,6 +246,7 @@ export const ModalIdentifiers = {
     CHANNEL_INVITE: 'channel_invite',
     CHANNEL_MEMBERS: 'channel_members',
     JOIN_ANOTHER_TEAM: 'join_another_team',
+    MY_TEAM: 'my_team',
     TEAM_MEMBERS: 'team_members',
     ADD_USER_TO_CHANNEL: 'add_user_to_channel',
     ADD_USER_TO_TEAM: 'add_user_to_team',

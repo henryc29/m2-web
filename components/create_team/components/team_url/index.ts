@@ -7,7 +7,7 @@ import {connect} from 'react-redux';
 import {ActionFunc} from 'mattermost-redux/types/actions';
 import {checkIfTeamExists, createTeam, getTeams as searchTeams} from 'mattermost-redux/actions/teams';
 
-import {Team, TeamSearchOpts, TeamsWithCount} from 'mattermost-redux/types/teams';
+import {Team, TeamSearchOpts} from 'mattermost-redux/types/teams';
 import {Client4Error} from 'mattermost-redux/types/client4';
 
 import TeamUrl from './team_url';

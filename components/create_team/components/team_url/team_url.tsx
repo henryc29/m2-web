@@ -81,11 +81,19 @@ export default class TeamUrl extends React.PureComponent<Props, State> {
         let teamName = `${currentUser.roles.includes('system_admin') ? 'o' : 'u'}-uet`;
 
         const teamList = await this.props.actions.searchTeams('', {});
-        if (teamList?.data) {
+
+        if (teamList?.data && teamName[0] === 'o') {
             const teamListWithName = teamList.data.map((value: any) => value.name).filter((value: any) => value.includes('o-uet'));
 
             teamName = `${teamName}-${teamListWithName.length + 1}`;
+        } else if (teamName[0] === 'u') {
+            teamName = `${teamName}-${Math.random().toString(36).replace(/[^a-z]+/g, '').substr(0, 5)}`;
+        } else {
+            teamName = `${teamName}-1`;
         }
+
+        // eslint-disable-next-line no-console
+        console.log(teamName);
         this.setState({teamName});
     }
 
